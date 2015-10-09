@@ -36,7 +36,7 @@ installation
   Where 1 is an index of array which holds values from the table. You can use 2 dimensional tables and extract its
   values using column index in second parameter of zen_field() function.
   
-  <code><?= zen_field(1, 2) ?></code>
+  <code><?php echo zen_field(1, 2) ?></code>
 
 2. A better approach is to use name/value pairs. In this case you should use table header tags <code>&lt;th&gt;</code> for
  field names.
@@ -48,12 +48,11 @@ installation
     &lt;/table&gt;
   [/zen-fields]
   </code></pre>
-    To get the value from second row in your template you would use
+    To output the value from second row in your template you would use
 
   <code><?php echo zen_field('field name 2') ?></code>
 
-   You can use 2 dimensional tables. The first table row then would hold column names in &lt;th&gt; tags. To extract
-    data from that table use second parameter in zen_field function as a column name.
+   You can use 2 dimensional tables. The first table row then would hold column names in <code>&lt;th&gt;</code> tags.
         
   (Visual edit mode)<pre><code>[zen-fields]<table>
     <tr><th></th><th>column 1</th><th>column 2</th></tr>
@@ -64,7 +63,7 @@ installation
   [/zen-fields]
   </code></pre>
   
-  And in template:
+  In your template use combination of row and column names to output your data:
   
  <code><?php echo zen_field('field name 2','column 1') ?></code> would output <code>Value 3</code> string
 
@@ -81,7 +80,7 @@ If you have only one column with values you can put table name in second paramet
 
 ###Iteration over values in tables
 
-It is possible to iterate over values from your table. The variable <code>$zen_fields->tables</code> holds an array of 
+It is possible to iterate over values from your tables. The variable <code>$zen_fields->tables</code> holds an array of 
 values from all the tables on the page.
 
 ###Escaping output
