@@ -56,12 +56,14 @@ installation
   <pre><code>[zen-fields]
     &lt;table&gt;
       &lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;th&gt;column name&lt;/th&gt;&lt;th&gt;another column&lt;/th&gt;&lt;/tr&gt;
-      &lt;tr&gt;&lt;th&gt;field name&lt;/th&gt;&lt;td&gt;Value 1&lt;/td&gt;&lt;td&gt;Value 2&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th&gt;field name  &lt;/th&gt;&lt;td&gt;Value 1&lt;/td&gt;&lt;td&gt;Value 2&lt;/td&gt;&lt;/tr&gt;
       &lt;tr&gt;&lt;th&gt;field name 1&lt;/th&gt;&lt;td&gt;Value 3&lt;/td&gt;&lt;td&gt;Value 4&lt;/td&gt;&lt;/tr&gt;
       &lt;tr&gt;&lt;th&gt;field name 2&lt;/th&gt;&lt;td&gt;Value 5&lt;/td&gt;&lt;td&gt;Value 6&lt;/td&gt;&lt;/tr&gt;
     &lt;/table&gt;
   [/zen-fields]
   </code></pre>
+  
+  And in template:
   
  <code><?php echo zen_field('field name','column name') ?></code>
 
