@@ -12,7 +12,7 @@ installation folder
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 ###Examples
-1. Simple table with values only - not recommended
+1. Simple table with values only
   (HTML page edit mode)<pre><code>Page content
   ...
   [zen-fields]
