@@ -24,25 +24,28 @@ installation
   [/zen-fields]
   ...
   </code></pre>
-  To get value from second row in your template you should put
+  To get value from second row in your template you should use
 
-  <code><?php echo zen_field(1) ?></code> or if you are using php version 5.4 and above <code><?= zen_field(1) ?></code>
+  <code><?php echo zen_field(1) ?></code>
+  or if you are using php version 5.4 and above 
+  <code><?= zen_field(1) ?></code>
 
   where 1 is an index of array which holds values from the table. You can use 2 dimensional tables and extract values
    for different columns using second parameter in zen_field function.
 
 2. Better approach is to use name/value pairs. In this case you should use table header tags for field names.
-  <pre><code>&lt;table&gt;
+  <pre><code>[zen-fields]&lt;table&gt;
       &lt;tr&gt;&lt;th&gt;field name 1&lt;/th&gt;&lt;td&gt;Value 1&lt;/td&gt;&lt;/tr&gt;
       &lt;tr&gt;&lt;th&gt;field name 2&lt;/th&gt;&lt;td&gt;Value 2&lt;/td&gt;&lt;/tr&gt;
       &lt;tr&gt;&lt;th&gt;field name 3&lt;/th&gt;&lt;td&gt;Value 3&lt;/td&gt;&lt;/tr&gt;
-    &lt;/table&gt;
+  &lt;/table&gt;
+  [/zen-fields]
   </code></pre>
-    In your template to get value from second row you would use
+    To get the value from second row in your template you would use
 
   <code><?php echo zen_field('field name 2') ?></code>
 
-   You can use 2 dimensional tables. The first table row then would hold column names in &lt;th&gt; tags. To extract data from
+   You can have 2 dimensional tables. The first table row then would hold column names in &lt;th&gt; tags. To extract data from
    that table use second parameter in zen_field function as a column name.
 
  <code><?php echo zen_field('field name','column name') ?></code>
@@ -56,7 +59,7 @@ And in template:
 
 <code><?php echo zen_field('field name','column name', 'table name') ?></code>
 
-If you have only one column of values you can put table name in second parameter.
+If you have only one column with values you can put table name in second parameter.
 
 ###Iteration over values in tables
 
