@@ -67,8 +67,7 @@ installation
     
   (Visual edit mode)<pre><code>
   ... content
-  [zen-fields]
-  <table>
+  [zen-fields]<table>
     <tr><th></th><th>column name</th><th>another column</th></tr>
     <tr><th>field name</th><td>Value 1</td><td>Value 2</td></tr>
     <tr><th>field name 1</th><td>Value 3</td><td>Value 4</td></tr>
