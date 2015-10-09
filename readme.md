@@ -1,5 +1,5 @@
 #Zen Custom Fields
-Simple to implement and use custom fields in WordPress templates. The plugin converts regular html tables into arrays of
+Easy to implement and use custom fields in WordPress templates. The plugin converts regular html tables into arrays of
  values.
 
 ###Usage
