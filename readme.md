@@ -25,18 +25,19 @@ installation
   ...
   </code></pre>
   
-  To get value from second row in your template you should use
+  To get the value from second row of the table you should use:
 
   <code><?php echo zen_field(1) ?></code>
   
-  or if you are using php version 5.4 and above 
+  in your template or if you are using php version 5.4 and above 
   
   <code><?= zen_field(1) ?></code>
 
-  where 1 is an index of array which holds values from the table. You can use 2 dimensional tables and extract its
+  Where 1 is an index of array which holds values from the table. You can use 2 dimensional tables and extract its
   values using column index in second parameter of zen_field() function.
+  <code><?= zen_field(1, 2) ?></code>
 
-2. Better approach is to use name/value pairs. In this case you should use table header tags <code>&lt;th&gt;</code> for
+2. A better approach is to use name/value pairs. In this case you should use table header tags <code>&lt;th&gt;</code> for
  field names.
   <pre><code>[zen-fields]
     &lt;table&gt;
@@ -54,17 +55,17 @@ installation
     data from that table use second parameter in zen_field function as a column name.
         
   (Visual edit mode)<pre><code>[zen-fields]<table>
-    <tr><th></th><th>column name</th><th>another column</th></tr>
-    <tr><th>field name</th><td>Value 1</td><td>Value 2</td></tr>
-    <tr><th>field name 1</th><td>Value 3</td><td>Value 4</td></tr>
-    <tr><th>field name 2</th><td>Value 5</td><td>Value 6</td></tr>
+    <tr><th></th><th>column 1</th><th>column 2</th></tr>
+    <tr><th>field name 1</th><td>Value 1</td><td>Value 2</td></tr>
+    <tr><th>field name 2</th><td>Value 3</td><td>Value 4</td></tr>
+    <tr><th>field name 3</th><td>Value 5</td><td>Value 6</td></tr>
   </table>
   [/zen-fields]
   </code></pre>
   
   And in template:
   
- <code><?php echo zen_field('field name','column name') ?></code>
+ <code><?php echo zen_field('field name 2','column 1') ?></code> would output <code>Value 3</code> string
 
 You can place many tables with different data between [zen-fields] short-tags. To target specific table in your template
 use table name in the third parameter in zen_field function. You need to specify table name using data-name attribute.
