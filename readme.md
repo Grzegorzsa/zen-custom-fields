@@ -81,5 +81,10 @@ If you have only one column with values you can put table name in second paramet
 
 ###Iteration over values in tables
 
-It is possible to iterate over values from your table. The variable <code>$zen_fields->tables</code> holds an array of values from
-all the tables on the page.
+It is possible to iterate over values from your table. The variable <code>$zen_fields->tables</code> holds an array of 
+values from all the tables on the page.
+
+###Escape output
+
+By default output is not escaped which allows you to use links, images and another HTML content in your custom fields.
+If you would like to escape the output use <code>zen_field_esc()</code> function instead of <code>zen_field()</code>
