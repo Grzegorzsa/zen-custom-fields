@@ -12,14 +12,17 @@ installation
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 ###Examples
-1. Table with just values (page edit -> text view)
-  <pre><code>[zen-fields]
+1. Simple table with just values (text view)
+  <pre><code>Page content
+  ...
+  [zen-fields]
     &lt;table&gt;
       &lt;tr&gt;&lt;td&gt;Value 1&lt;/td&gt;&lt;/tr&gt;
       &lt;tr&gt;&lt;td&gt;Value 2&lt;/td&gt;&lt;/tr&gt;
       &lt;tr&gt;&lt;td&gt;Value 3&lt;/td&gt;&lt;/tr&gt;
     &lt;/table&gt;
   [/zen-fields]
+  ...
   </code></pre>
   To get value from second row in your template you should put
 
@@ -39,7 +42,7 @@ installation
 
   <code><?php echo zen_field('field name 2') ?></code>
 
-   You can use 2 dimensional tables. The first table row then would hold column names in <th> tags. To extract data from
+   You can use 2 dimensional tables. The first table row then would hold column names in &lt;th&gt; tags. To extract data from
    that table use second parameter in zen_field function as a column name.
 
  <code><?php echo zen_field('field name','column name') ?></code>
@@ -53,9 +56,9 @@ And in template:
 
 <code><?php echo zen_field('field name','column name', 'table name') ?></code>
 
-If you have only one row of values you can put table name in second parameter.
+If you have only one column of values you can put table name in second parameter.
 
-###Iteration over arrays of values
+###Iteration over values in tables
 
 It is possible to iterate over values from your table. <code>$zen_fields->tables</code> holds an array of values from
 all tables on the page.
