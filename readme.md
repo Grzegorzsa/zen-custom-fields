@@ -8,7 +8,7 @@ Easy to implement and use custom fields for WordPress templates. The plugin conv
 
 ###Installation
 1. Download `mazter.zip` from this page and unzip its content to the `/wp-content/plugins/` directory in your Wordpress 
-installation
+installation folder
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 ###Examples
