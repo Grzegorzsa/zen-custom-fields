@@ -10,7 +10,7 @@ Simple to implement and use custom fields in Wordpress templates. The plugin con
 e.g.
 1. Table with just values
 
-<code>
+<pre><code>
 [zen-fields]
   &lt;table&gt;
     &lt;tr&gt;&lt;td&gt;Value 1&lt;/td&gt;&lt;/tr&gt;
@@ -18,7 +18,7 @@ e.g.
     &lt;tr&gt;&lt;td&gt;Value 3&lt;/td&gt;&lt;/tr&gt;
   &lt;/table&gt;
 [/zen-fields]
-</code>
+</code></pre>
 
   To get value from second row in your template you should put
 
@@ -28,13 +28,13 @@ e.g.
   different columns using second parameter in zen_field function.
 
 2. Better approach is to use name/value pairs. In this case you should use table header tags for field names.
-<code>
+<pre><code>
   &lt;table&gt;
     &lt;tr&gt;&lt;th&gt;field name 1&lt;/th&gt;&lt;td&gt;Value 1&lt;/td&gt;&lt;/tr&gt;
     &lt;tr&gt;&lt;th&gt;field name 2&lt;/th&gt;&lt;td&gt;Value 2&lt;/td&gt;&lt;/tr&gt;
     &lt;tr&gt;&lt;th&gt;field name 3&lt;/th&gt;&lt;td&gt;Value 3&lt;/td&gt;&lt;/tr&gt;
   &lt;/table&gt;
-</code>
+</code></pre>
   In your template to get value from second row you would use
 
   <code><?php echo zen_field('field name 2') ?></code>
