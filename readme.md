@@ -13,7 +13,7 @@ installation
 
 ###Examples
 1. Simple table with values only - not recommended
-  (HTML edit mode)<pre><code>Page content
+  (HTML page edit mode)<pre><code>Page content
   ...
   [zen-fields]
     &lt;table&gt;
@@ -25,11 +25,11 @@ installation
   ...
   </code></pre>
   
-  To get the value from second row of the table you should use:
+  To get the value from second row of the table you should use in your template:
 
   <code><?php echo zen_field(1) ?></code>
   
-  in your template or if you are using php version 5.4 and above 
+  or if you are using php version 5.4 and above 
   
   <code><?= zen_field(1) ?></code>
 
