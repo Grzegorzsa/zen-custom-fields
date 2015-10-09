@@ -3,21 +3,17 @@ Simple to implement and use custom fields in Wordpress templates. The plugin con
  values.
 
 ###Usage
-1. Place the table with values you want to use on your page between [zen-fields] ... [/zen-fields] short-tags on your
- page.
-2. In your template use zen_field() function to output values from above table.
+1. Place the table with values you want to use on your page between [zen-fields] ... [/zen-fields] short-tags
+2. In your template use zen_field() function to output values from above table
 
 ###Installation
 1. Download `mazter.zip` from this page and unzip its content to the `/wp-content/plugins/` directory in your Wordpress 
 installation
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
-
 ###Examples
-1. Table with just values (text view)
-
-  <pre><code>
-  [zen-fields]
+1. Table with just values (page edit -> text view)
+  <pre><code>[zen-fields]
     &lt;table&gt;
       &lt;tr&gt;&lt;td&gt;Value 1&lt;/td&gt;&lt;/tr&gt;
       &lt;tr&gt;&lt;td&gt;Value 2&lt;/td&gt;&lt;/tr&gt;
@@ -25,25 +21,21 @@ installation
     &lt;/table&gt;
   [/zen-fields]
   </code></pre>
-  
   To get value from second row in your template you should put
 
-  <code><?php echo zen_field(1) ?></code> or if you are using php 5.4  <code><?= zen_field(1) ?></code>
+  <code><?php echo zen_field(1) ?></code> or if you are using php version 5.4 and above <code><?= zen_field(1) ?></code>
 
-  where 1 an is index of array which holds values from the table. You can use 2 dimensional tables and extract values for
-  different columns using second parameter in zen_field function.
+  where 1 is an index of array which holds values from the table. You can use 2 dimensional tables and extract values
+   for different columns using second parameter in zen_field function.
 
 2. Better approach is to use name/value pairs. In this case you should use table header tags for field names.
-
-  <pre><code>
-    &lt;table&gt;
+  <pre><code>&lt;table&gt;
       &lt;tr&gt;&lt;th&gt;field name 1&lt;/th&gt;&lt;td&gt;Value 1&lt;/td&gt;&lt;/tr&gt;
       &lt;tr&gt;&lt;th&gt;field name 2&lt;/th&gt;&lt;td&gt;Value 2&lt;/td&gt;&lt;/tr&gt;
       &lt;tr&gt;&lt;th&gt;field name 3&lt;/th&gt;&lt;td&gt;Value 3&lt;/td&gt;&lt;/tr&gt;
     &lt;/table&gt;
   </code></pre>
-  
-  In your template to get value from second row you would use
+    In your template to get value from second row you would use
 
   <code><?php echo zen_field('field name 2') ?></code>
 
@@ -63,3 +55,7 @@ And in template:
 
 If you have only one row of values you can put table name in second parameter.
 
+###Iteration over arrays of values
+
+It is possible to iterate over values from your table. <code>$zen_fields->tables</code> holds an array of values from
+all tables on the page.
