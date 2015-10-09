@@ -12,8 +12,8 @@ installation
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 ###Examples
-1. Simple table with values only - not recommended (text view)
-  <pre><code>Page content
+1. Simple table with values only - not recommended
+  (HTML edit mode)<pre><code>Page content
   ...
   [zen-fields]
     &lt;table&gt;
@@ -52,18 +52,7 @@ installation
 
    You can use 2 dimensional tables. The first table row then would hold column names in &lt;th&gt; tags. To extract
     data from that table use second parameter in zen_field function as a column name.
-    
-  (HTML edit mode)<pre><code>
-  [zen-fields]
-    &lt;table&gt;
-      &lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;th&gt;column name&lt;/th&gt;&lt;th&gt;another column&lt;/th&gt;&lt;/tr&gt;
-      &lt;tr&gt;&lt;th&gt;field name&lt;/th&gt;&lt;td&gt;Value 1&lt;/td&gt;&lt;td&gt;Value 2&lt;/td&gt;&lt;/tr&gt;
-      &lt;tr&gt;&lt;th&gt;field name 1&lt;/th&gt;&lt;td&gt;Value 3&lt;/td&gt;&lt;td&gt;Value 4&lt;/td&gt;&lt;/tr&gt;
-      &lt;tr&gt;&lt;th&gt;field name 2&lt;/th&gt;&lt;td&gt;Value 5&lt;/td&gt;&lt;td&gt;Value 6&lt;/td&gt;&lt;/tr&gt;
-    &lt;/table&gt;
-  [/zen-fields]
-    </code></pre>
-    
+        
   (Visual edit mode)<pre><code>[zen-fields]<table>
     <tr><th></th><th>column name</th><th>another column</th></tr>
     <tr><th>field name</th><td>Value 1</td><td>Value 2</td></tr>
