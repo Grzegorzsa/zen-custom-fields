@@ -35,6 +35,7 @@ installation
 
   Where 1 is an index of array which holds values from the table. You can use 2 dimensional tables and extract its
   values using column index in second parameter of zen_field() function.
+  
   <code><?= zen_field(1, 2) ?></code>
 
 2. A better approach is to use name/value pairs. In this case you should use table header tags <code>&lt;th&gt;</code> for
