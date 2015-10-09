@@ -12,32 +12,28 @@ e.g.
 
 <code>
 [zen-fields]
-  <table>
-    <tr><td>Value 1</td></tr>
-    <tr><td>Value 2</td></tr>
-    <tr><td>Value 3</td></tr>
-  </table>
+  &lt;table&gt;
+    &lt;tr&gt;&lt;td&gt;Value 1&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Value 2&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Value 3&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
 [/zen-fields]
 </code>
 
   To get value from second row in your template you should put
 
-  <code><?php echo zen_field(1) ?></code>
-
-  or if you are using php 5.4
-
-  <code><?= zen_field(1) ?></code>
+  <code><?php echo zen_field(1) ?></code> or if you are using php 5.4  <code><?= zen_field(1) ?></code>
 
   where 1 is index of array which holds values from the table. You can use 2 dimensional tables and extract values for
   different columns using second parameter in zen_field function.
 
 2. Better approach is to use name/value pairs. In this case you should use table header tags for field names.
 <code>
-  <table>
-    <tr><th>field name 1</th><td>Value 1</td></tr>
-    <tr><th>field name 2</th><td>Value 2</td></tr>
-    <tr><th>field name 3</th><td>Value 3</td></tr>
-  </table>
+  &lt;table&gt;
+    &lt;tr&gt;&lt;th&gt;field name 1&lt;/th&gt;&lt;td&gt;Value 1&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;field name 2&lt;/th&gt;&lt;td&gt;Value 2&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;field name 3&lt;/th&gt;&lt;td&gt;Value 3&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
 </code>
   In your template to get value from second row you would use
 
@@ -51,7 +47,7 @@ e.g.
 You can place many tables with different data between [zen-field] short-tag. To target specific table in your template
 use table name in the third parameter in zen_field function. You need to specify table name using data-name attribute.
 
-e.g. <code><table data-name="table name">...</table></code>
+e.g. <code>&lt;table data-name=&quot;table name&quot;&gt;...&lt;/table&gt;</code>
 
 And in template:
 
