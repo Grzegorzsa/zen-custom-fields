@@ -56,11 +56,18 @@ installation
   <pre><code>[zen-fields]
     &lt;table&gt;
       &lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;th&gt;column name&lt;/th&gt;&lt;th&gt;another column&lt;/th&gt;&lt;/tr&gt;
-      &lt;tr&gt;&lt;th&gt;field name  &lt;/th&gt;&lt;td&gt;Value 1&lt;/td&gt;&lt;td&gt;Value 2&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th&gt;field name&lt;/th&gt;&lt;td&gt;Value 1&lt;/td&gt;&lt;td&gt;Value 2&lt;/td&gt;&lt;/tr&gt;
       &lt;tr&gt;&lt;th&gt;field name 1&lt;/th&gt;&lt;td&gt;Value 3&lt;/td&gt;&lt;td&gt;Value 4&lt;/td&gt;&lt;/tr&gt;
       &lt;tr&gt;&lt;th&gt;field name 2&lt;/th&gt;&lt;td&gt;Value 5&lt;/td&gt;&lt;td&gt;Value 6&lt;/td&gt;&lt;/tr&gt;
     &lt;/table&gt;
   [/zen-fields]
+  
+      <table>
+        <tr><th></th><th>column name</th><th>another column</th></tr>
+        <tr><th>field name</th><td>Value 1</td><td>Value 2</td></tr>
+        <tr><th>field name 1</th><td>Value 3</td><td>Value 4</td></tr>
+        <tr><th>field name 2</th><td>Value 5</td><td>Value 6</td></tr>
+      </table>
   </code></pre>
   
   And in template:
