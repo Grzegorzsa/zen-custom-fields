@@ -1,5 +1,5 @@
 #Zen Custom Fields
-Simple to implement and use custom fields in Wordpress templates. The plugin converts regular html tables into arrays of
+Simple to implement and use custom fields in WordPress templates. The plugin converts regular html tables into arrays of
  values.
 
 ###Usage
@@ -12,7 +12,7 @@ installation
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 ###Examples
-1. Simple table with just values (text view)
+1. Simple table with values only - not recommended (text view)
   <pre><code>Page content
   ...
   [zen-fields]
@@ -24,17 +24,21 @@ installation
   [/zen-fields]
   ...
   </code></pre>
+  
   To get value from second row in your template you should use
 
   <code><?php echo zen_field(1) ?></code>
+  
   or if you are using php version 5.4 and above 
+  
   <code><?= zen_field(1) ?></code>
 
-  where 1 is an index of array which holds values from the table. You can use 2 dimensional tables and extract values
-   for different columns using second parameter in zen_field function.
+  where 1 is an index of array which holds values from the table. You can use 2 dimensional tables and extract its
+  values using column name in second parameter of zen_field() function.
 
-2. Better approach is to use name/value pairs. In this case you should use table header tags for field names.
-  <pre><code>[zen-fields]&lt;table&gt;
+2. Better approach is to use name/value pairs. In this case you should use table header tags &lt;th&gt; for field names.
+  <pre><code>[zen-fields]
+  &lt;table&gt;
       &lt;tr&gt;&lt;th&gt;field name 1&lt;/th&gt;&lt;td&gt;Value 1&lt;/td&gt;&lt;/tr&gt;
       &lt;tr&gt;&lt;th&gt;field name 2&lt;/th&gt;&lt;td&gt;Value 2&lt;/td&gt;&lt;/tr&gt;
       &lt;tr&gt;&lt;th&gt;field name 3&lt;/th&gt;&lt;td&gt;Value 3&lt;/td&gt;&lt;/tr&gt;
