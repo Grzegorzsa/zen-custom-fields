@@ -54,7 +54,6 @@ installation
     data from that table use second parameter in zen_field function as a column name.
     
   (HTML edit mode)<pre><code>
-  ...content
   [zen-fields]
     &lt;table&gt;
       &lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;th&gt;column name&lt;/th&gt;&lt;th&gt;another column&lt;/th&gt;&lt;/tr&gt;
@@ -65,9 +64,7 @@ installation
   [/zen-fields]
     </code></pre>
     
-  (Visual edit mode)<pre><code>
-  ... content
-  [zen-fields]<table>
+  (Visual edit mode)<pre><code>[zen-fields]<table>
     <tr><th></th><th>column name</th><th>another column</th></tr>
     <tr><th>field name</th><td>Value 1</td><td>Value 2</td></tr>
     <tr><th>field name 1</th><td>Value 3</td><td>Value 4</td></tr>
