@@ -81,5 +81,5 @@ If you have only one column with values you can put table name in second paramet
 
 ###Iteration over values in tables
 
-It is possible to iterate over values from your table. <code>$zen_fields->tables</code> holds an array of values from
+It is possible to iterate over values from your table. The variable <code>$zen_fields->tables</code> holds an array of values from
 all the tables on the page.
