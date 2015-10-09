@@ -1,11 +1,11 @@
 <?php
 /*
   Plugin Name: Zen Custom Fields
-  Plugin URI: zen-custom-fields.zen-dev.pl
+  Plugin URI: https://github.com/Grzegorzsa/zen-custom-fields
   Description: Simple, fast and beautiful. Use this plugin to implement comprehensive custom fields in your template in just 5 minutes. The plugin converts regular html tables into arrays of values. Depending on table structure arrays can be simple index based or more complex associative ones.
   Version: 1.0
   Author: Grzegorz Sarzyński
-  Author URI: zen-dev.pl
+  Author URI: https://github.com/Grzegorzsa
   License: GPL2
   License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
