@@ -12,7 +12,7 @@ installation folder
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 ###Examples
-1. Simple table with values only
+1. Basic usage - simple table with values only
   (HTML page edit mode)<pre><code>Page content
   ...
   [zen-fields]
@@ -25,7 +25,7 @@ installation folder
   ...
   </code></pre>
   
-  To get the value from second row of the table you should use in your template:
+  To output the value from second row of the table you should use in your template:
 
   <code><?php echo zen_field(1) ?></code>
   
@@ -38,7 +38,7 @@ installation folder
   
   <code><?php echo zen_field(1, 2) ?></code>
 
-2. A better approach is to use name/value pairs. In this case you should use table header tags <code>&lt;th&gt;</code> for
+2. A better approach is to use key/value pairs. In this case you should use table header tags <code>&lt;th&gt;</code> for
  field names.
   <pre><code>[zen-fields]
     &lt;table&gt;
@@ -80,7 +80,7 @@ If you have only one column with values you can put table name in second paramet
 
 ###Iteration over values in tables
 
-It is possible to iterate over values from your tables. The variable <code>$zen_fields->tables</code> holds the array
+It is possible to iterate over values from your tables. The variable <code>$zen_fields->tables</code> holds an array
  with values from all the tables on the page.
 
 ###Escaping output
