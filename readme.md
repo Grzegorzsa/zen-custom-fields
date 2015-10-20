@@ -7,7 +7,7 @@ Easy to implement and use custom fields for WordPress templates. The plugin conv
 2. In your template use zen_field() function to output values from above table
 
 ###Installation
-1. Download `mazter.zip` from this page and unzip its content to the `/wp-content/plugins/` directory in your Wordpress 
+1. Download zipped plugin from this page and unzip its content to the `/wp-content/plugins/` directory in your Wordpress 
 installation folder
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
