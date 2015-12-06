@@ -90,6 +90,8 @@ If you would like to escape the output use <code>zen_field_esc()</code> function
 
 ###Changelog
 
+- 1.11
+  - Fix critical bug
 - 1.1
   - Fix bugs
   - Allow attributes in &lt;th&gt; element

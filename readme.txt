@@ -48,7 +48,7 @@ For more details check 'Screenshots' section
 
 = How to use this plugin? =
 
-Simply add table to your page between `[zen-fileds]` short-tags. And use `zen_field()` function to output value from that table.
+Simply add table to your page between [zen-fileds] short-tags. And use `zen_field()` function to output value from that table.
 
 e.g. `<?php echo zen_field(1) ?>` - will output value from second row of your table that contains values only
 
@@ -80,8 +80,10 @@ https://github.com/Grzegorzsa/zen-custom-fields/issues
 
 By default output is not escaped which allows you to echo html tags e.g. links or images. If you would like to escape your output use 'zen_field_esc()' instead of 'zen_field()' function.
 
-== Screenshots ==
+== Changelog ==
 
+= 1.11 =
+* Fix critical bug
 = 1.1 =
 * Fix bugs
 * Allow attributes in `<th>` element

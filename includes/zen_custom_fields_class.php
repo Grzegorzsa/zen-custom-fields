@@ -79,7 +79,7 @@ class ZenCustomFields {
 		if( ! $rowNames && $columnNames ) {
 			$rows = $this->getTagContent( $str, 'tr' );
 			$namesStr = array_shift( $rows );
-			$$namesStr = strtr($namesStr, array("<th"=>'<td', '</th'=>'</td'));
+			$namesStr = strtr($namesStr, array("<th"=>'<td', '</th'=>'</td'));
 			$names = $this->getTagContent( $namesStr, 'td' );
 			$namesLen = count( $names );
 			foreach ( $rows as $row )	{
