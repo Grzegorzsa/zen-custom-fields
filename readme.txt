@@ -84,4 +84,4 @@ By default output is not escaped which allows you to echo html tags e.g. links o
 
 = 1.1 =
 * Fix bugs
-* Allow attributes in <th> element
+* Allow attributes in `<th>` element
