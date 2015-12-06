@@ -3,7 +3,7 @@
 	Plugin Name: Zen Custom Fields
 	Plugin URI: https://github.com/Grzegorzsa/zen-custom-fields
 	Description: Easy to implement and use custom fields for WordPress templates. The plugin converts regular html tables into arrays of values.
-	Version: 1.0
+	Version: 1.1
 	Author: Grzegorz Sarzyński
 	Author URI: https://github.com/Grzegorzsa
 	License: GPL2

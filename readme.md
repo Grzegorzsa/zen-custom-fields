@@ -38,7 +38,7 @@ installation folder
   
   <code><?php echo zen_field(1, 2) ?></code>
 
-2. A better approach is to use key/value pairs. In this case you should use table header tags <code>&lt;th&gt;</code> for
+2. A better approach is to use named key/value pairs. In this case you should use table header tags <code>&lt;th&gt;</code> for
  field names.
   <pre><code>[zen-fields]
     &lt;table&gt;
@@ -87,3 +87,9 @@ It is possible to iterate over values from your tables. The variable <code>$zen_
 
 By default output is not escaped which allows you to use links, images and another HTML content in your custom fields.
 If you would like to escape the output use <code>zen_field_esc()</code> function instead of <code>zen_field()</code>
+
+###Changelog
+
+1.1
+ - Fix bugs
+ - Allow attributes in <th> element

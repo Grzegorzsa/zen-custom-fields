@@ -30,13 +30,15 @@ class ZenCustomFields {
 	private function getTagContent( $str, $tag ) {
 		$output = array();
 		$end_tag =  '</' . $tag . '>';
-		$tag = '<' . $tag . '>';
-		$len = strlen( $tag );
+		$tag = '<' . $tag;
+		$len_end = strlen( $end_tag ) - 1 ;
 		while( strpos( $str, $tag ) !== false ) {
 			$start = strpos( $str, $tag );
 			$end = strpos( $str, $end_tag );
-			$output[] = substr( $str, $start + $len, $end - $start - $len );
-			$str = substr( $str, $end + $len );
+			$substr = substr( $str, $start + $len_end - 1, $end - $start - $len_end + 1 );
+			$close_tag_pos = strpos( $substr, '>' ) + 1;
+			$output[] = substr($substr, $close_tag_pos);
+			$str = substr( $str, $end + $len_end );
 		}
 		return $output;
 	}
@@ -70,16 +72,14 @@ class ZenCustomFields {
 			$lastRow = substr( $str, $startLast, $endLast - $startLast );
 			if( strpos( $lastRow, '<th' ) != false ) $rowNames = true;
 		}
-
 		if( ! $rowNames && ! $columnNames )	{
 			$rows = $this->getTagContent( $str, 'tr' );
 			foreach ( $rows as $row ) $output[] = $this->getTagContent( $row, 'td' );
 		}
-
 		if( ! $rowNames && $columnNames ) {
 			$rows = $this->getTagContent( $str, 'tr' );
 			$namesStr = array_shift( $rows );
-			$namesStr = str_replace( "th>", "td>", $namesStr );
+			$$namesStr = strtr($namesStr, array("<th"=>'<td', '</th'=>'</td'));
 			$names = $this->getTagContent( $namesStr, 'td' );
 			$namesLen = count( $names );
 			foreach ( $rows as $row )	{
@@ -93,27 +93,25 @@ class ZenCustomFields {
 				$output[] = $arr1;
 			}
 		}
-
 		if( $rowNames && ! $columnNames ) {
 			$rows = $this->getTagContent( $str, 'tr' );
 			foreach ( $rows as $row ) {
-				$row = str_replace( "th>", "td>", $row );
+				$row = strtr($row, array("<th"=>'<td', '</th'=>'</td'));
 				$arr = $this->getTagContent( $row, 'td' );
 				$name = array_shift( $arr );
 				$output[$name] = $arr;
 			}
 		}
-
 		if( $rowNames && $columnNames )
 		{
 			$rows = $this->getTagContent( $str, 'tr' );
 			$namesStr = array_shift( $rows );
-			$namesStr = str_replace( "th>", "td>", $namesStr );
+			$namesStr = strtr($namesStr, array("<th"=>'<td', '</th'=>'</td'));
 			$names = $this->getTagContent( $namesStr, 'td' );
 			$namesLen = count( $names );
 			foreach ( $rows as $row )
 			{
-				$row = str_replace( "th>", "td>", $row );
+				$row = strtr($row, array("<th"=>'<td', '</th'=>'</td'));
 				$arr1 = array();
 				$arr = $this->getTagContent( $row, 'td' );
 				$name1 = array_shift( $arr );
