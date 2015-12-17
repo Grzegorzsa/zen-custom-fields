@@ -2,7 +2,7 @@
 Contributors: grzecho
 Tags: custom fields, custom templates, post meta, custom values, custom keys
 Requires at least: 3.0.1
-Tested up to: 4.3.1
+Tested up to: 4.4.0
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -80,8 +80,16 @@ https://github.com/Grzegorzsa/zen-custom-fields/issues
 
 By default output is not escaped which allows you to echo html tags e.g. links or images. If you would like to escape your output use 'zen_field_esc()' instead of 'zen_field()' function.
 
+=  How to get image src attribute =
+
+'zen_field_src()' function can be used to extract link from the image placed in custom field.
+
 == Changelog ==
 
+= 1.12 =
+* Improve data iteration
+* Fix problem with plugin initalization
+* Add parse image source function
 = 1.11 =
 * Fix critical bug
 = 1.1 =

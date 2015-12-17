@@ -162,4 +162,39 @@ class ZenCustomFields {
 	public function getEscapedField( $param1 = false, $param2 = false, $param3 = false ) {
 		return htmlspecialchars( zen_field( $param1, $param2, $param3 ), ENT_QUOTES, 'UTF-8' );
 	}
+
+	public function getTable( $name ) {
+	  if ( isset( $this->tables[ $name ] ) ) {
+	    return $this->tables[ $name ];
+	  } else {
+	    return false;
+	  }
+	}
+
+	public function getAttr( $attr = 'src', $param1 = false, $param2 = false, $param3 = false ) {
+	  $content = zen_field( $param1, $param2, $param3 );
+	  $output = false;
+	  if( strpos( $content, $attr ) != false ) {
+      $content = substr($content, strpos($content, $attr));
+      $single = strpos( $content, "'");
+      $double = strpos( $content, '"');
+      if( $single || $double ) {
+        if ( $single ) $char = "'";
+        if ( $double ) $char = '"';
+        if ( $single && $double ) {
+          if ( $single < $double) {
+            $char = "'";
+          } else {
+            $char = '"';
+          }
+        }
+        $pos = strpos($content, $char);
+        $content = substr($content, $pos + 1);
+        $pos = strpos($content, $char);
+        $content = substr($content, 0, $pos);
+        $output = $content;
+      }
+	  }
+	  return $output;
+	}
 }

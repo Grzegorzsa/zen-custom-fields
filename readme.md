@@ -88,8 +88,16 @@ It is possible to iterate over values from your tables. The variable <code>$zen_
 By default output is not escaped which allows you to use links, images and another HTML content in your custom fields.
 If you would like to escape the output use <code>zen_field_esc()</code> function instead of <code>zen_field()</code>
 
+###Extracting src attribute from an image
+
+<code>zen_field_src()</code> function can be used to get link from the image placed in custom field.
+
 ###Changelog
 
+- 1.12
+  - Improve data iteration
+  - Fix problem with plugin initalization
+  - Add parse image source function
 - 1.11
   - Fix critical bug
 - 1.1
