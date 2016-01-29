@@ -86,6 +86,8 @@ By default output is not escaped which allows you to echo html tags e.g. links o
 
 == Changelog ==
 
+= 1.14 =
+* Fox critical bug
 = 1.13 =
 * Prevent from showing errors when no custom fields are defined
 = 1.12 =

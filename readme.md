@@ -94,6 +94,8 @@ If you would like to escape the output use <code>zen_field_esc()</code> function
 
 ###Changelog
 
+- 1.14
+  - Fix critical bug
 - 1.13
   - Prevent from showing errors when no custom fields are defined
 - 1.12
