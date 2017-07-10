@@ -27,16 +27,16 @@ installation folder
   
   To output the value from second row of the table you should use in your template:
 
-  <code><?php echo zen_field(1) ?></code>
+  <code>&lt;?php echo zen_field(1) ?&gt;</code>
   
   or if you are using php version 5.4 and above 
   
-  <code><?= zen_field(1) ?></code>
+  <code>&lt;?= zen_field(1) ?&gt;</code>
 
   Where 1 is an index of array which holds values from the table. You can use 2 dimensional tables and extract its
   values using column index in second parameter of zen_field() function.
   
-  <code><?php echo zen_field(1, 2) ?></code>
+  <code>&lt;?php echo zen_field(1, 2) ?&gt;</code>
 
 2. A better approach is to use named key/value pairs. In this case you should use table header tags <code>&lt;th&gt;</code> for
  field names.
@@ -50,7 +50,7 @@ installation folder
   </code></pre>
     To output the value from second row in your template you would use
 
-  <code><?php echo zen_field('field name 2') ?></code>
+  <code>&lt;?php echo zen_field('field name 2') ?&gt;</code>
 
    You can use 2 dimensional tables. The first table row then would hold column names in <code>&lt;th&gt;</code> tags.
         
@@ -65,7 +65,7 @@ installation folder
   
   In your template use combination of row and column names to output your data:
   
- <code><?php echo zen_field('field name 2','column 1') ?></code> would output <code>Value 3</code> string
+ <code>&lt;?php echo zen_field('field name 2','column 1') ?&gt;</code> would output <code>Value 3</code> string
 
 You can place many tables with different data between [zen-fields] short-tags. To target specific table in your template
 use table name in the third parameter in zen_field function. You need to specify table name using data-name attribute.
@@ -74,13 +74,13 @@ e.g. <code>&lt;table data-name=&quot;table name&quot;&gt;...&lt;/table&gt;</code
 
 And in template:
 
-<code><?php echo zen_field('field name','column name', 'table name') ?></code>
+<code>&lt;?php echo zen_field('field name','column name', 'table name') ?&gt;</code>
 
 If you have only one column with values you can put table name in second parameter.
 
 ###Iteration over values in tables
 
-It is possible to iterate over values from your tables. The variable <code>$zen_fields->tables</code> holds an array
+It is possible to iterate over values from your tables. The variable <code>$zen_fields-&gt;tables</code> holds an array
  with values from all the tables on the page.
 
 ###Escaping output
