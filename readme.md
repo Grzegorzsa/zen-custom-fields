@@ -94,6 +94,8 @@ If you would like to escape the output use <code>zen_field_esc()</code> function
 
 ###Changelog
 
+- 1.15
+  - Fix get variables outside of post loop
 - 1.14
   - Fix critical bug
 - 1.13

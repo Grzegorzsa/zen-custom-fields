@@ -86,6 +86,8 @@ By default output is not escaped which allows you to echo html tags e.g. links o
 
 == Changelog ==
 
+= 1.15 =
+* Fix get variables outside of post loop
 = 1.14 =
 * Fix critical bug
 = 1.13 =
