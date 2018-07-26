@@ -4,8 +4,8 @@ Easy to implement and use custom fields for WordPress templates. The plugin conv
 
 ## Usage
 
-1. Place the table with values you want to use on your page between [zen-fields] ... [/zen-fields] short-tags
-2. In your template use zen_field() function to output values from above table
+1. Place the table with values you want to use on your page between `[zen-fields] ... [/zen-fields]` short-tags
+2. In your template use `zen_field()` function to output values from above table
 
 ## Installation
 
@@ -14,7 +14,7 @@ Easy to implement and use custom fields for WordPress templates. The plugin conv
 
 ## Examples
 
-1. Basic usage - simple table with values only
+Basic usage - simple table with values only
   (HTML page edit mode)
 
   ```html
@@ -31,34 +31,38 @@ Easy to implement and use custom fields for WordPress templates. The plugin conv
   ```
 
 `<?php echo zen_field(1) ?>` - use in your template to output the value from second row of the table  
+
  Or if you are using php version 5.4 and above: `<?= zen_field(1) ?>`. Where 1 is an index of array which holds values from the table.  
- `<?php echo zen_field(1, 2) ?>` - use 2 dimensional tables and extract its  values using column index in second parameter of zen_field() function.
+
+`<?php echo zen_field(1, 2) ?>` - use 2 dimensional tables and extract its  values using column index in second parameter of zen_field() function.
   
-2. A better approach is to use named key/value pairs. In this case you should use table header tags `<th>` for
+A better approach is to use named key/value pairs. In this case you should use table header tags `<th>` for
  field names.
-  ```html
-    [zen-fields]
-        <table>
-          <tr><th>field name 1</th><td>Value 1</td></tr>
-          <tr><th>field name 2</th><td>Value 2</td></tr>
-          <tr><th>field name 3</th><td>Value 3</td></tr>
-        </table>
-      [/zen-fields]
-  ```
+
+```html
+  [zen-fields]
+      <table>
+        <tr><th>field name 1</th><td>Value 1</td></tr>
+        <tr><th>field name 2</th><td>Value 2</td></tr>
+        <tr><th>field name 3</th><td>Value 3</td></tr>
+      </table>
+    [/zen-fields]
+```
+
 `<?php echo zen_field('field name 2') ?>` - output the value from second row in your template
 
- You can use 2 dimensional tables. The first table row then would hold column names in `<th>` tags.
-        
-  (Visual edit mode)<pre><code>[zen-fields]<table>
-    <tr><th></th><th>column 1</th><th>column 2</th></tr>
-    <tr><th>field name 1</th><td>Value 1</td><td>Value 2</td></tr>
-    <tr><th>field name 2</th><td>Value 3</td><td>Value 4</td></tr>
-    <tr><th>field name 3</th><td>Value 5</td><td>Value 6</td></tr>
-  </table>
-  [/zen-fields]
-  </code></pre>
+You can use 2 dimensional tables. The first table row then would hold column names in `<th>` tags.
+
+(Visual edit mode)<pre><code>[zen-fields]<table>
+  <tr><th></th><th>column 1</th><th>column 2</th></tr>
+  <tr><th>field name 1</th><td>Value 1</td><td>Value 2</td></tr>
+  <tr><th>field name 2</th><td>Value 3</td><td>Value 4</td></tr>
+  <tr><th>field name 3</th><td>Value 5</td><td>Value 6</td></tr>
+</table>
+[/zen-fields]
+</code></pre>
   
-  In your template use combination of row and column names to output your data:
+In your template use combination of row and column names to output your data:
   
 `<?php echo zen_field('field name 2','column 1') ?>` - would output `Value 3` string
 
