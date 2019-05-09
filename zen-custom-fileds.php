@@ -3,7 +3,7 @@
 	Plugin Name: Zen Custom Fields
 	Plugin URI: https://github.com/Grzegorzsa/zen-custom-fields
 	Description: Easy to implement and use custom fields for WordPress templates. The plugin converts regular html tables into arrays of values.
-	Version: 1.15
+	Version: 1.16
 	Author: Grzegorz Sarzyński
 	Author URI: https://github.com/Grzegorzsa/zen-custom-fields
 	License: GPL2
@@ -21,7 +21,7 @@ add_shortcode( 'zen-fields', 'zen_fields_init' );
 function zen_field( $param1 = false, $param2 = false, $param3 = false ) {
 	global $zen_fields;
   check_zen_fields_object();
-	return $zen_fields->getField( $param1, $param2, $param3 );
+	return fix_br($zen_fields->getField( $param1, $param2, $param3 ));
 }
 
 function zen_field_esc( $param1 = false, $param2 = false, $param3 = false ) {
@@ -73,4 +73,9 @@ function zen_fields_parse() {
   if ( !empty( $content ) ) {
     apply_filters( 'the_content', $content );
   }
+}
+
+function fix_br($html) {
+  $html = nl2br($html);
+  return str_replace('<br><br>', '<br>', $html);
 }

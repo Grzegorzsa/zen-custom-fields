@@ -1,8 +1,8 @@
 === Zen Custom Fields ===
 Contributors: grzecho
 Tags: custom fields, custom templates, post meta, custom values, custom keys
-Requires at least: 3.0.1
-Tested up to: 4.8
+Requires at least: 3.1
+Tested up to: 5.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -86,6 +86,8 @@ By default output is not escaped which allows you to echo html tags e.g. links o
 
 == Changelog ==
 
+= 1.16 =
+* Fix issues with `<br>` tags in new version of Wordpress
 = 1.15 =
 * Fix get variables outside of post loop
 = 1.14 =

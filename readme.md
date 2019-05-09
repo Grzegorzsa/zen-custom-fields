@@ -93,6 +93,8 @@ If you would like to escape the output use `zen_field_esc()` function instead of
 
 ## Changelog
 
+- 1.16
+  - Fix issues with `<br>` tags in new version of Wordpress
 - 1.15
   - Fix get variables outside of post loop
 - 1.14
